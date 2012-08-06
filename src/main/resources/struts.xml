@@ -6,7 +6,7 @@
   <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
   <constant name="struts.devMode" value="true"/>
   
-  <include file="example.xml"/>
+  <include file="task.xml"/>
   
   <!-- Add addition packages and configuration here. -->
 </struts>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<!-- 
+  - This file is included by the struts.xml file as an example
+  - of how to break up the configuration file into multiple files.
+-->
+<struts>
+    <package name="task" namespace="/task" extends="struts-default">
+
+        <action name="Index">
+            <result>/task/Index.jsp</result>
+        </action>
+
+        <action name="SubmitBug">
+            <result>/task/SubmitBug.jsp</result>
+        </action>
+
+        <action name="ReviewBug" class="bugreport.actions.ReviewBugAction">
+            <result>/task/ReviewBug.jsp</result>
+        </action>
+
+        <action name="BugsReviewList" class="bugreport.actions.BugsReviewListAction">
+            <result>/task/BugsReviewList.jsp</result>
+        </action>
+
+        <action name="SaveBug" class="bugreport.actions.SaveBugAction">
+            <result>/task/SaveBug.jsp</result>
+        </action>
+
+        <action name="AcceptBug" class="bugreport.actions.AcceptBugAction">
+            <result>/task/BugAccepted.jsp</result>
+        </action>
+
+        <action name="RejectBug" class="bugreport.actions.RejectBugAction">
+            <result>/task/BugRejected.jsp</result>
+        </action>
+    </package>
+</struts>
