@@ -11,7 +11,7 @@
 <s:form action="SaveBug">
     <s:textfield name="project" label="Project" />
     <s:textfield name="version" label="Version" />
-    <s:textfield name="description" label="Description" />
+    <s:textfield name="summary" label="Summary" />
     <s:submit name="Submit" value="Submit"/>
 </s:form>
 
