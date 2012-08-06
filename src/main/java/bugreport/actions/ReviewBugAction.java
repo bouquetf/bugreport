@@ -1,29 +1,26 @@
 package bugreport.actions;
 
+import bugreport.bonita.BonitaProcessManagement;
 import bugreport.entities.Bug;
 import com.opensymphony.xwork2.ActionSupport;
+import org.ow2.bonita.facade.exception.ActivityNotFoundException;
+import org.ow2.bonita.facade.exception.InstanceNotFoundException;
+
+import javax.security.auth.login.LoginException;
 
 public class ReviewBugAction extends ActionSupport {
-    private String id;
+    private String taskId;
 
     public String execute() {
         return SUCCESS;
     }
 
-    public void setBugId(String id) {
-        this.id = id;
+    public void setTaskId(String taskId) {
+        this.taskId = taskId;
     }
 
-    public Bug getBug() {
-        // TODO : retrieve bug information from process
-        Bug bug = new Bug();
-        bug.setName("Name"+id);
-        bug.setDescription("Description "+id);
-        bug.setProject("Project "+id);
-        bug.setVersion("Version "+id);
-        bug.setPriority("Priority "+id);
-
-        return bug;
+    public Bug getBug() throws InstanceNotFoundException, ActivityNotFoundException, LoginException {
+        return new BonitaProcessManagement().getBug(taskId);
     }
 
 }

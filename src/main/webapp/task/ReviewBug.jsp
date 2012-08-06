@@ -9,7 +9,6 @@
 <h2>Review Bug</h2>
 
 <s:form action="">
-    <!-- TODO : peupler les champs -->
     <s:textfield label="Project" name="project" value="%{bug.project}" readonly="true" />
     <s:textfield label="Version" name="version" value="%{bug.version}" readonly="true" />
     <s:textfield label="Description" name="description" value="%{bug.description}" readonly="true" />

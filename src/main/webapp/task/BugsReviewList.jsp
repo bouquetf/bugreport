@@ -23,7 +23,7 @@
             <td><s:property value="ExecutionId"/></td>
             <td><s:property value="Assignedto"/></td>
             <td>
-                <s:url var="urlId" action="ReviewBug"><s:param name="bugId" value="%{ExecutionId}"/> </s:url>
+                <s:url var="urlId" action="ReviewBug"><s:param name="taskId" value="%{TaskId}"/> </s:url>
                 <s:a href="%{urlId}">Review Bug</s:a>
             </td>
         </tr>

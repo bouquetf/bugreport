@@ -11,6 +11,8 @@ public class Bug {
     private String executionId;
     private String priority;
 
+    private String taskId;
+
     public String getProject() {
         return project;
     }
@@ -71,5 +73,17 @@ public class Bug {
 
     public void setPriority(String priority) {
         this.priority = priority;
+    }
+
+    public void setTaskId(String taskId) {
+        this.taskId = taskId;
+    }
+
+    public String getPriority() {
+        return priority;
+    }
+
+    public String getTaskId() {
+        return taskId;
     }
 }
