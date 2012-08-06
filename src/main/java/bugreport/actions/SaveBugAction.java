@@ -4,8 +4,6 @@ import bugreport.bonita.BonitaProcessManagement;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class SaveBugAction extends ActionSupport {
-
-
     private String project;
     private String version;
     private String summary;
